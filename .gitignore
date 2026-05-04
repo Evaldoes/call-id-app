@@ -17,6 +17,18 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
+# Android keystore — nunca versionar (contém chave privada de assinatura)
+android/app/debug.keystore
+android/app/release.keystore
+android/app/*.keystore
+
+# Android build / gradle cache
+android/build/
+android/app/build/
+android/.gradle/
+android/.cxx/
+android/local.properties
+
 # Metro
 .metro-health-check*
 
@@ -29,7 +41,9 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
+# env files — nunca versionar chaves de API
+.env
+.env.*
 .env*.local
 
 # typescript
